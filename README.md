@@ -10,6 +10,18 @@ TEAM 1
 
 ---
 
+## Branch Protection Rule
+![Branch Protection Rule](github/branch_protection.png)
+
+## Push Rejected Example
+![Push Rejected](github/push_rejected.png)
+
+## Merged Branches
+![Merged Branch](github/merged_Mookjsi.png)
+![Merged Branch](github/merged_sleepylee02.png)
+![Merged Branch](github/merged_Hwiplash.png)
+---
+
 ## 프로젝트 소개
 이 프로젝트는 FastAPI를 기반으로 사용자 관리 기능(로그인, 회원가입, 계정 삭제, 비밀번호 변경)을 제공하는 웹 애플리케이션입니다. 사용자는 간단한 절차를 통해 계정을 생성하고, 로그인하여 서비스를 이용할 수 있습니다.
 
