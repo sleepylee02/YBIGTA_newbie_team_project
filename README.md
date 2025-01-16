@@ -17,9 +17,9 @@ TEAM 1
 ![Push Rejected](github/push_rejected.png)
 
 ## Merged Branches
-![Merged Branch](github/merged_Mookjsi.png)
-![Merged Branch](github/merged_sleepylee02.png)
-![Merged Branch](github/merged_Hwiplash.png)
+![Mookjsi](github/merged_Mookjsi.png)
+![sleepylee02](github/merged_sleepylee02.png)
+![Hwiplash](github/merged_Hwiplash.png)
 ---
 
 ## 프로젝트 소개
