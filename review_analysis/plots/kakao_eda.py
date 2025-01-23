@@ -12,7 +12,7 @@ def plot_rating_distribution(data, output_dir):
     plt.title('Rating distribution')
     plt.xlabel('Rating')
     plt.ylabel('The count')
-    plt.savefig(os.path.join(output_dir, 'rating_distribution.png'))
+    plt.savefig(os.path.join(output_dir, 'kakao_rating_distribution.png'))
     plt.close()
 
 def plot_review_length_distribution(data, output_dir):
@@ -21,7 +21,7 @@ def plot_review_length_distribution(data, output_dir):
     plt.title('Review length distribution')
     plt.xlabel('Review length')
     plt.ylabel('Frequency')
-    plt.savefig(os.path.join(output_dir, 'review_length_distribution.png'))
+    plt.savefig(os.path.join(output_dir, 'kakao_review_length_distribution.png'))
     plt.close()
 
 def plot_date_distribution(data, output_dir):
@@ -34,7 +34,7 @@ def plot_date_distribution(data, output_dir):
     plt.ylabel('The count of review')
     plt.xticks(rotation=45)
     plt.tight_layout()
-    plt.savefig(os.path.join(output_dir, 'date_distribution.png'))
+    plt.savefig(os.path.join(output_dir, 'kakao_date_distribution.png'))
     plt.close()
 
 def main():

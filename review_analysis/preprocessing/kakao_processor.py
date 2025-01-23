@@ -13,7 +13,7 @@ class KakaoProcessor(BaseDataProcessor):
     def __init__(self, input_path: str, output_dir: str):
         super().__init__(input_path, output_dir)
         self.data = None
-        with open('C:/Users/nickj/OneDrive/바탕 화면/YBIGTA_newbie_team_project/review_analysis/preprocessing/stopwords-ko.txt', 'r', encoding='utf-8') as f:
+        with open('stopwords-ko.txt', 'r', encoding='utf-8') as f:
             self.stopwords = [line.strip() for line in f.readlines()]
     
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
