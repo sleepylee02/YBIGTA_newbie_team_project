@@ -1,7 +1,6 @@
 from review_analysis.crawling.base_crawler import BaseCrawler
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import NoSuchElementException, ElementClickInterceptedException, ElementNotInteractableException
@@ -14,20 +13,23 @@ import os
 
 
 class DiningCrawler(BaseCrawler):
-    def __init__(self, output_dir: str):
+    def __init__(self, output_dir: str, driver_path: str = None):
         super().__init__(output_dir)
         self.base_url = 'https://www.diningcode.com/profile.php?rid=LtMjLaf0kZJC'
+        self.driver_path = driver_path
 
         log_file = os.path.join(output_dir, "crawler.log")
         self.logger = setup_logger("DiningCrawler", log_file)
         
     def start_browser(self):
         self.logger.info("브라우저 시작 중...")
-        options = webdriver.ChromeOptions()
-        options.add_argument("--no-sandbox")
-        options.add_argument("--disable-dev-shm-usage")
+        # options = webdriver.ChromeOptions()
+        # options.add_argument("--no-sandbox")
+        # options.add_argument("--disable-dev-shm-usage")
 
-        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+        # # Manually specify the ChromeDriver executable path
+        # self.driver = webdriver.Chrome(service=Service(self.driver_path), options=options)
+        self.driver = webdriver.Chrome()
         self.driver.get(self.base_url)
         time.sleep(5)
         self.logger.info("브라우저 시작 완료")
