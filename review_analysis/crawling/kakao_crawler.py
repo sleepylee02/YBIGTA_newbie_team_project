@@ -33,7 +33,8 @@ class ReviewCrawler(BaseCrawler):
         super().__init__(output_dir)
         self.base_url = "https://place.map.kakao.com/17733090"
         self.driver = None
-        self.logger = setup_logger()
+        log_file = os.path.join(output_dir, "review_crawler.log")
+        self.logger = setup_logger(name="ReviewCrawler", log_file=log_file)
         self.data: pd.DataFrame = pd.DataFrame() 
 
     def start_browser(self):
@@ -67,10 +68,8 @@ class ReviewCrawler(BaseCrawler):
         Raises:
             Exception: If the browser is not started.
         """
-        if not self.driver:
-            self.logger.error("Browser is not started. Call start_browser() first.")
-            raise Exception("Browser not started.")
-
+        self.start_browser()
+        
         try:
             self.logger.info("Navigating to the website...")
             self.driver.get(self.base_url)
@@ -139,7 +138,7 @@ class ReviewCrawler(BaseCrawler):
         self.logger.info("Saving data to the output directory...")
         try:
             os.makedirs(self.output_dir, exist_ok=True)
-            file_path = os.path.join(self.output_dir, 'reviews_kakao.csv')  # 사이트 이름에 맞게 수정
+            file_path = os.path.join(self.output_dir, 'reviews_kakao.csv') 
 
             self.data.to_csv(file_path, index=False, encoding='utf-8-sig')
 
