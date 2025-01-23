@@ -18,7 +18,7 @@ class DiningCrawler(BaseCrawler):
         self.base_url = 'https://www.diningcode.com/profile.php?rid=LtMjLaf0kZJC'
         self.driver_path = driver_path
 
-        log_file = os.path.join(output_dir, "crawler.log")
+        log_file = os.path.join(output_dir, "DiningCrawler.log")
         self.logger = setup_logger("DiningCrawler", log_file)
         
     def start_browser(self):
