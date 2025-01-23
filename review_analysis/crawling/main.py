@@ -1,7 +1,7 @@
 from argparse import ArgumentParser
 from typing import Dict, Type
 from review_analysis.crawling.base_crawler import BaseCrawler
-from review_analysis.crawling.diningcode_crawler import DiningCrawler
+from review_analysis.crawling.test_crawler import DiningCrawler
 import sys
 import os
 
