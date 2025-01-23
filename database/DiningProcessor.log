@@ -1,0 +1,76 @@
+2025-01-23 23:34:52,117 - DiningProcessor - INFO - Reading input file: ../../database/reviews_diningcode.csv
+2025-01-23 23:34:52,119 - DiningProcessor - INFO - Reading data from ../../database/reviews_diningcode.csv
+2025-01-23 23:34:52,119 - DiningProcessor - INFO - Starting preprocessing
+2025-01-23 23:34:52,120 - DiningProcessor - INFO - Missing values per column:
+2025-01-23 23:34:52,121 - DiningProcessor - INFO - Star        0
+Date        6
+Comment    19
+dtype: int64
+2025-01-23 23:34:52,121 - DiningProcessor - INFO - Dropped rows with missing values. Remaining rows: 201
+2025-01-23 23:34:53,407 - DiningProcessor - INFO - Preprocessing completed
+2025-01-23 23:34:53,454 - DiningProcessor - INFO - Starting feature engineering
+2025-01-23 23:34:53,455 - DiningProcessor - INFO - Feature engineering completed
+2025-01-23 23:34:53,457 - DiningProcessor - INFO - TF-IDF vectorization completed.
+2025-01-23 23:34:53,458 - DiningProcessor - INFO - Concatenated TF-IDF features with original data.
+2025-01-23 23:34:53,458 - DiningProcessor - INFO - 데이터 저장 시작
+2025-01-23 23:34:53,465 - DiningProcessor - INFO - 데이터가 ../../database/reviews_diningcode.csv에 저장되었습니다.
+2025-01-23 23:36:24,565 - DiningProcessor - INFO - Reading input file: ../../database/reviews_diningcode.csv
+2025-01-23 23:36:24,570 - DiningProcessor - INFO - Reading data from ../../database/reviews_diningcode.csv
+2025-01-23 23:36:24,570 - DiningProcessor - INFO - Starting preprocessing
+2025-01-23 23:36:24,571 - DiningProcessor - INFO - Missing values per column:
+2025-01-23 23:36:24,571 - DiningProcessor - INFO - Star              7
+Date              7
+Comment           7
+processed_text    8
+day_of_week       7
+                 ..
+포장                7
+품절                7
+필수                7
+행복                7
+회전                7
+Length: 107, dtype: int64
+2025-01-23 23:36:24,572 - DiningProcessor - INFO - Dropped rows with missing values. Remaining rows: 194
+2025-01-23 23:36:24,572 - DiningProcessor - ERROR - Preprocessing failed: Can only use .str accessor with string values!
+2025-01-23 23:36:44,669 - DiningProcessor - INFO - Reading input file: ../../database/reviews_diningcode.csv
+2025-01-23 23:36:44,675 - DiningProcessor - INFO - Reading data from ../../database/reviews_diningcode.csv
+2025-01-23 23:36:44,675 - DiningProcessor - INFO - Starting preprocessing
+2025-01-23 23:36:44,676 - DiningProcessor - INFO - Missing values per column:
+2025-01-23 23:36:44,676 - DiningProcessor - INFO - Star              7
+Date              7
+Comment           7
+processed_text    8
+day_of_week       7
+                 ..
+포장                7
+품절                7
+필수                7
+행복                7
+회전                7
+Length: 107, dtype: int64
+2025-01-23 23:36:44,677 - DiningProcessor - INFO - Dropped rows with missing values. Remaining rows: 194
+2025-01-23 23:36:44,677 - DiningProcessor - ERROR - Preprocessing failed: Can only use .str accessor with string values!
+2025-01-23 23:40:18,641 - DiningProcessor - INFO - Reading input file: ../../database/reviews_diningcode.csv
+2025-01-23 23:40:18,648 - DiningProcessor - INFO - Reading data from ../../database/reviews_diningcode.csv
+2025-01-23 23:40:18,648 - DiningProcessor - INFO - Starting preprocessing
+2025-01-23 23:40:18,649 - DiningProcessor - INFO - Missing values per column:
+2025-01-23 23:40:18,649 - DiningProcessor - INFO - Star              7
+Date              7
+Comment           7
+processed_text    8
+day_of_week       7
+                 ..
+포장                7
+품절                7
+필수                7
+행복                7
+회전                7
+Length: 107, dtype: int64
+2025-01-23 23:40:18,650 - DiningProcessor - INFO - Dropped rows with missing values. Remaining rows: 194
+2025-01-23 23:40:19,858 - DiningProcessor - INFO - Preprocessing completed
+2025-01-23 23:40:19,911 - DiningProcessor - INFO - Starting feature engineering
+2025-01-23 23:40:19,912 - DiningProcessor - INFO - Feature engineering completed
+2025-01-23 23:40:19,914 - DiningProcessor - INFO - TF-IDF vectorization completed.
+2025-01-23 23:40:19,914 - DiningProcessor - INFO - Concatenated TF-IDF features with original data.
+2025-01-23 23:40:19,914 - DiningProcessor - INFO - 데이터 저장 시작
+2025-01-23 23:40:19,924 - DiningProcessor - INFO - Data saved successfully at ../../database/preprocessed_reviews_diningcode.csv.
