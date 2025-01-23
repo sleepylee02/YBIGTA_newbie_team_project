@@ -1,0 +1,20 @@
+2025-01-23 18:46:08,565 - DiningCrawler - INFO - 브라우저 시작 완료
+2025-01-23 18:46:08,595 - DiningCrawler - INFO - 더 이상 '더보기' 버튼이 없습니다.
+2025-01-23 18:46:08,596 - DiningCrawler - INFO - 더보기 확장 완료
+2025-01-23 18:48:46,299 - DiningCrawler - INFO - 브라우저 시작 완료
+2025-01-23 18:48:46,324 - DiningCrawler - INFO - 더 이상 '더보기' 버튼이 없습니다.
+2025-01-23 18:48:46,325 - DiningCrawler - INFO - 더보기 확장 완료
+2025-01-23 18:52:47,071 - DiningCrawler - INFO - 브라우저 시작 완료
+2025-01-23 18:52:47,078 - DiningCrawler - INFO - 더 이상 '더보기' 버튼이 없습니다.
+2025-01-23 18:52:47,081 - DiningCrawler - INFO - 더보기 확장 완료
+2025-01-23 18:53:17,589 - DiningCrawler - INFO - 브라우저 시작 완료
+2025-01-23 18:53:22,609 - DiningCrawler - INFO - 더 이상 '더보기' 버튼이 없습니다.
+2025-01-23 18:53:22,609 - DiningCrawler - INFO - 더보기 확장 완료
+2025-01-23 18:55:36,208 - DiningCrawler - INFO - 브라우저 시작 중...
+2025-01-23 18:55:49,627 - DiningCrawler - INFO - 브라우저 시작 완료
+2025-01-23 18:55:49,629 - DiningCrawler - INFO - 브라우저 시작 완료
+2025-01-23 18:57:22,343 - DiningCrawler - WARNING - 더보기 버튼이 현재 상호작용할 수 없는 상태입니다.
+2025-01-23 18:57:22,343 - DiningCrawler - INFO - 더보기 확장 완료
+2025-01-23 18:57:22,934 - DiningCrawler - INFO - 리뷰 스크래핑 완료
+2025-01-23 18:57:22,934 - DiningCrawler - INFO - 데이터 저장 시작
+2025-01-23 18:57:22,981 - DiningCrawler - INFO - 데이터가 database/reviews_diningcode.csv에 저장되었습니다.
