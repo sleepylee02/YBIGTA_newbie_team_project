@@ -7,12 +7,13 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'
 from review_analysis.crawling.base_crawler import BaseCrawler
 from review_analysis.crawling.diningcode_crawler import DiningCrawler
 from review_analysis.crawling.kakao_crawler import ReviewCrawler
-
+from review_analysis.crawling.googlemap_crawler import GoogleMapsCrawler
 
 # 모든 크롤링 클래스를 예시 형식으로 적어주세요. 
 CRAWLER_CLASSES: Dict[str, Type[BaseCrawler]] = {
     "dining_code": DiningCrawler,
-    "kakao": ReviewCrawler
+    "kakao": ReviewCrawler,
+    "google": GoogleMapsCrawler
 }
 
 ######## 수정 금지 #########
