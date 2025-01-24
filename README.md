@@ -9,6 +9,23 @@ TEAM 1
 - **강정묵**: 안녕하세요. 22학번 응용통계학과 강정묵입니다.
 
 ---
+## 크롤링 프로젝트
+
+_리뷰 데이터 수집_
+
+장소: **성심당**
+
+크롤링 사이트:
+
++ 구글 맵 ()
++ 
+
+
+실행방법:
+
+
+---
+
 
 ## Branch Protection Rule
 ![Branch Protection Rule](github/branch_protection.png)
