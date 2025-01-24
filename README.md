@@ -23,8 +23,38 @@ _리뷰 데이터 수집_
 
 실행방법: 
 
+1. 명령어 분석
+
+ArgumentParser를 사용해 명령줄에서 입력된 옵션을 처리
+
++ args.output_dir: 저장 디렉토리
++ args.crawler: 특정 크롤러 이름
++ args.all: 모든 크롤러를 실행하는 플래그
+
+2. 크롤링 작업
+
++ args.all이 True이면, CRAWLER_CLASSES에 등록된 모든 크롤러를 순차적으로 실행
++ args.crawler가 제공되면, 해당 크롤러만 실행
++ 둘 다 없는 경우, ValueError("No crawlers.") 에러를 발생
+
+3. 크롤러 실행
+각 크롤러는 다음 메서드를 호출:
+
++ scrape_reviews(): 리뷰 데이터 수집
++ save_to_database(): 수집된 데이터 저장
+
 
 ---
+## EDA/FE, 시각화
+**1. 개별 EDA** 
+   + 다이닝 코드:
+   + 구글 맵: plot_review_length_distribution- 리뷰 길이가 짧은 데이터가 매우 많고 긴 데이터일 수록 빈도가 급격히 감소하는 long tail 형태를 보임, plot_rating_distribution- 4과 5점이 대부분의 리뷰를 차지하며 5점의 비율이 압도적으로 많은 것으로 보아 장소에 대한 긍정적인 평가가 보임, plot_date_distribution- 2023년부터 리뷰수가 급증하였고 2024년에 가장 많은 리뷰가 있음, 최신 데이터 집중 경향으로 과거 데이터가 상대적으로 부족함을 보임.
+   
+**2. 개별 데이터 전처리/FE**
+   + 구글 맵: 리뷰 길이가 0인 데이터를 필터링하고 비정상적으로 긴 리뷰를 이상치처리 함, review_date 열을 pd.to_datetime으로 변환해 날짜 형식으로 처리, 변환 불가능한 값(결측치)은 dropna를 통해 제거, astype(str)를 사용해 리뷰 텍스트를 문자열로 강제 변환하여 계산 오류 방지, review_length: 리뷰 길이를 기반으로 짧은 리뷰와 긴 리뷰 간의 차이를 분석하거나, 분류/회귀 모델에 활용 가능, review_date를 날짜로 변환하여 시간 흐름에 따른 분석이 가능하도록 데이터 준비.
+**3. 비교분석 결과**
+
+------
 
 
 ## Branch Protection Rule
