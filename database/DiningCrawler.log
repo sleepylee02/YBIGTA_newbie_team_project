@@ -1,0 +1,405 @@
+2025-01-24 20:13:58,603 - INFO - 브라우저 시작 중...
+2025-01-24 20:13:58,616 - DEBUG - Started executable: `chromedriver` in a child process with pid: 14972
+2025-01-24 20:13:59,133 - DEBUG - POST http://localhost:52410/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}
+2025-01-24 20:13:59,133 - DEBUG - Starting new HTTP connection (1): localhost:52410
+2025-01-24 20:14:00,005 - DEBUG - http://localhost:52410 "POST /session HTTP/1.1" 200 0
+2025-01-24 20:14:00,005 - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"132.0.6834.84","chrome":{"chromedriverVersion":"132.0.6834.83 (03d59cf5ecf1d8444838ff9a1e96231304d4ff9c-refs/branch-heads/6834@{#3390})","userDataDir":"C:\\Users\\nickj\\AppData\\Local\\Temp\\scoped_dir14972_1234043599"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:52414"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"88ede45c18414ec2a10c13209c086e97"}} | headers=HTTPHeaderDict({'Content-Length': '882', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:00,006 - DEBUG - Finished Request
+2025-01-24 20:14:02,165 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/url {"url": "https://www.diningcode.com/profile.php?rid=LtMjLaf0kZJC"}
+2025-01-24 20:14:06,103 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/url HTTP/1.1" 200 0
+2025-01-24 20:14:06,103 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:06,103 - DEBUG - Finished Request
+2025-01-24 20:14:11,105 - INFO - 브라우저 시작 완료
+2025-01-24 20:14:11,106 - INFO - 브라우저 시작 완료
+2025-01-24 20:14:11,106 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:11,126 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:11,126 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:11,126 - DEBUG - Finished Request
+2025-01-24 20:14:11,127 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:11,289 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:11,290 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:11,290 - DEBUG - Finished Request
+2025-01-24 20:14:13,290 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:13,308 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:13,309 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:13,309 - DEBUG - Finished Request
+2025-01-24 20:14:13,309 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:13,422 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:13,422 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:13,422 - DEBUG - Finished Request
+2025-01-24 20:14:15,423 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:15,440 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:15,440 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:15,440 - DEBUG - Finished Request
+2025-01-24 20:14:15,440 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:15,544 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:15,544 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:15,544 - DEBUG - Finished Request
+2025-01-24 20:14:17,545 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:17,562 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:17,563 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:17,563 - DEBUG - Finished Request
+2025-01-24 20:14:17,563 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:17,673 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:17,673 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:17,673 - DEBUG - Finished Request
+2025-01-24 20:14:19,674 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:19,692 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:19,692 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:19,693 - DEBUG - Finished Request
+2025-01-24 20:14:19,693 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:19,812 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:19,813 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:19,813 - DEBUG - Finished Request
+2025-01-24 20:14:21,814 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:21,829 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:21,830 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:21,830 - DEBUG - Finished Request
+2025-01-24 20:14:21,830 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:21,956 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:21,957 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:21,957 - DEBUG - Finished Request
+2025-01-24 20:14:23,958 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:23,976 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:23,977 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:23,977 - DEBUG - Finished Request
+2025-01-24 20:14:23,977 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:24,086 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:24,087 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:24,087 - DEBUG - Finished Request
+2025-01-24 20:14:26,088 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:26,107 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:26,107 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:26,107 - DEBUG - Finished Request
+2025-01-24 20:14:26,107 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:26,250 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:26,250 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:26,250 - DEBUG - Finished Request
+2025-01-24 20:14:28,251 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:28,273 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:28,273 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:28,273 - DEBUG - Finished Request
+2025-01-24 20:14:28,274 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:28,365 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:28,365 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:28,365 - DEBUG - Finished Request
+2025-01-24 20:14:30,366 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:30,384 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:30,384 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:30,384 - DEBUG - Finished Request
+2025-01-24 20:14:30,384 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:30,506 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:30,506 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:30,506 - DEBUG - Finished Request
+2025-01-24 20:14:32,507 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:32,523 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:32,523 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:32,523 - DEBUG - Finished Request
+2025-01-24 20:14:32,524 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:32,632 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:32,632 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:32,632 - DEBUG - Finished Request
+2025-01-24 20:14:34,633 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:34,660 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:34,661 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:34,661 - DEBUG - Finished Request
+2025-01-24 20:14:34,661 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:34,762 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:34,762 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:34,762 - DEBUG - Finished Request
+2025-01-24 20:14:36,763 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:36,780 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:36,780 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:36,780 - DEBUG - Finished Request
+2025-01-24 20:14:36,781 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:36,897 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:36,898 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:36,898 - DEBUG - Finished Request
+2025-01-24 20:14:38,898 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:38,912 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:38,912 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:38,912 - DEBUG - Finished Request
+2025-01-24 20:14:38,913 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:39,026 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:39,027 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:39,027 - DEBUG - Finished Request
+2025-01-24 20:14:41,028 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:41,041 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:41,042 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:41,042 - DEBUG - Finished Request
+2025-01-24 20:14:41,042 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:41,167 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:41,167 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:41,167 - DEBUG - Finished Request
+2025-01-24 20:14:43,168 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:43,186 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:43,186 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:43,186 - DEBUG - Finished Request
+2025-01-24 20:14:43,186 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:43,297 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:43,297 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:43,298 - DEBUG - Finished Request
+2025-01-24 20:14:45,298 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:45,315 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:45,316 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:45,316 - DEBUG - Finished Request
+2025-01-24 20:14:45,316 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:45,432 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:45,432 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:45,432 - DEBUG - Finished Request
+2025-01-24 20:14:47,433 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:47,450 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:47,451 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:47,451 - DEBUG - Finished Request
+2025-01-24 20:14:47,451 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:47,571 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:47,571 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:47,571 - DEBUG - Finished Request
+2025-01-24 20:14:49,572 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:49,589 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:49,590 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:49,590 - DEBUG - Finished Request
+2025-01-24 20:14:49,590 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:49,714 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:49,714 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:49,714 - DEBUG - Finished Request
+2025-01-24 20:14:51,715 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:51,731 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:51,732 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:51,732 - DEBUG - Finished Request
+2025-01-24 20:14:51,732 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:51,866 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:51,867 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:51,867 - DEBUG - Finished Request
+2025-01-24 20:14:53,868 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:53,885 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:53,885 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:53,886 - DEBUG - Finished Request
+2025-01-24 20:14:53,886 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:54,012 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:54,013 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:54,013 - DEBUG - Finished Request
+2025-01-24 20:14:56,014 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:56,032 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:56,032 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:56,032 - DEBUG - Finished Request
+2025-01-24 20:14:56,032 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:56,151 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:56,151 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:56,152 - DEBUG - Finished Request
+2025-01-24 20:14:58,152 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:14:58,170 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:14:58,170 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:58,170 - DEBUG - Finished Request
+2025-01-24 20:14:58,171 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:14:58,309 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:14:58,309 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:14:58,309 - DEBUG - Finished Request
+2025-01-24 20:15:00,310 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:00,326 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:00,327 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:00,327 - DEBUG - Finished Request
+2025-01-24 20:15:00,327 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:00,452 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:00,452 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:00,453 - DEBUG - Finished Request
+2025-01-24 20:15:02,454 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:02,471 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:02,472 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:02,472 - DEBUG - Finished Request
+2025-01-24 20:15:02,472 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:02,590 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:02,590 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:02,591 - DEBUG - Finished Request
+2025-01-24 20:15:04,591 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:04,609 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:04,609 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:04,609 - DEBUG - Finished Request
+2025-01-24 20:15:04,609 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:04,735 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:04,735 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:04,736 - DEBUG - Finished Request
+2025-01-24 20:15:06,736 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:06,752 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:06,753 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:06,753 - DEBUG - Finished Request
+2025-01-24 20:15:06,753 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:06,885 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:06,885 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:06,886 - DEBUG - Finished Request
+2025-01-24 20:15:08,886 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:08,904 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:08,904 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:08,904 - DEBUG - Finished Request
+2025-01-24 20:15:08,905 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:09,018 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:09,018 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:09,018 - DEBUG - Finished Request
+2025-01-24 20:15:11,019 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:11,038 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:11,038 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:11,038 - DEBUG - Finished Request
+2025-01-24 20:15:11,038 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:11,163 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:11,163 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:11,163 - DEBUG - Finished Request
+2025-01-24 20:15:13,164 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:13,181 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:13,181 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:13,181 - DEBUG - Finished Request
+2025-01-24 20:15:13,182 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:13,301 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:13,301 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:13,301 - DEBUG - Finished Request
+2025-01-24 20:15:15,302 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:15,318 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:15,319 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:15,319 - DEBUG - Finished Request
+2025-01-24 20:15:15,319 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:15,431 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:15,432 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:15,432 - DEBUG - Finished Request
+2025-01-24 20:15:17,433 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:17,454 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:17,454 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:17,455 - DEBUG - Finished Request
+2025-01-24 20:15:17,455 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:17,578 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:17,578 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:17,578 - DEBUG - Finished Request
+2025-01-24 20:15:19,579 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:19,598 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:19,599 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:19,599 - DEBUG - Finished Request
+2025-01-24 20:15:19,599 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:19,735 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:19,735 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:19,736 - DEBUG - Finished Request
+2025-01-24 20:15:21,736 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:21,752 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:21,753 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:21,753 - DEBUG - Finished Request
+2025-01-24 20:15:21,753 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:21,876 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:21,876 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:21,876 - DEBUG - Finished Request
+2025-01-24 20:15:23,878 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:23,896 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:23,896 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:23,896 - DEBUG - Finished Request
+2025-01-24 20:15:23,897 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:24,030 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:24,030 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:24,030 - DEBUG - Finished Request
+2025-01-24 20:15:26,030 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:26,048 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:26,049 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:26,049 - DEBUG - Finished Request
+2025-01-24 20:15:26,049 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:26,180 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:26,180 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:26,180 - DEBUG - Finished Request
+2025-01-24 20:15:28,181 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:28,199 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:28,199 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:28,199 - DEBUG - Finished Request
+2025-01-24 20:15:28,199 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:28,318 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:28,318 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:28,318 - DEBUG - Finished Request
+2025-01-24 20:15:30,320 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:30,338 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:30,338 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:30,338 - DEBUG - Finished Request
+2025-01-24 20:15:30,338 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:30,465 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:30,465 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:30,465 - DEBUG - Finished Request
+2025-01-24 20:15:32,467 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:32,484 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:32,484 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:32,485 - DEBUG - Finished Request
+2025-01-24 20:15:32,485 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:32,632 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:32,632 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:32,632 - DEBUG - Finished Request
+2025-01-24 20:15:34,633 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:34,652 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:34,652 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:34,652 - DEBUG - Finished Request
+2025-01-24 20:15:34,653 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:34,768 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:34,769 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:34,769 - DEBUG - Finished Request
+2025-01-24 20:15:36,769 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:36,786 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:36,786 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:36,787 - DEBUG - Finished Request
+2025-01-24 20:15:36,787 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:36,908 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:36,909 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:36,909 - DEBUG - Finished Request
+2025-01-24 20:15:38,909 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:38,930 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:38,930 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:38,930 - DEBUG - Finished Request
+2025-01-24 20:15:38,930 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:39,048 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:39,048 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:39,048 - DEBUG - Finished Request
+2025-01-24 20:15:41,050 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:41,066 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:41,066 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:41,066 - DEBUG - Finished Request
+2025-01-24 20:15:41,066 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:41,184 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:41,184 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:41,184 - DEBUG - Finished Request
+2025-01-24 20:15:43,185 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:43,202 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:43,202 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:43,203 - DEBUG - Finished Request
+2025-01-24 20:15:43,203 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:43,325 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:43,325 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:43,326 - DEBUG - Finished Request
+2025-01-24 20:15:45,327 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:45,344 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:45,345 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:45,345 - DEBUG - Finished Request
+2025-01-24 20:15:45,345 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:45,484 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 200 0
+2025-01-24 20:15:45,484 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:45,485 - DEBUG - Finished Request
+2025-01-24 20:15:47,486 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element {"using": "css selector", "value": ".More__Review__Button"}
+2025-01-24 20:15:47,503 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element HTTP/1.1" 200 0
+2025-01-24 20:15:47,503 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:47,504 - DEBUG - Finished Request
+2025-01-24 20:15:47,504 - DEBUG - POST http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click {"id": "f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488"}
+2025-01-24 20:15:47,537 - DEBUG - http://localhost:52410 "POST /session/88ede45c18414ec2a10c13209c086e97/element/f.26CB1CE8DEA9F0A4E49DB68D206105EA.d.411D57063FAB8F323BBA30C6F6EDAAB1.e.1488/click HTTP/1.1" 400 0
+2025-01-24 20:15:47,537 - DEBUG - Remote response: status=400 | data={"value":{"error":"element not interactable","message":"element not interactable\n  (Session info: chrome=132.0.6834.84)","stacktrace":"\tGetHandleVerifier [0x00007FF6F455FBE5+28741]\n\t(No symbol) [0x00007FF6F44C7890]\n\t(No symbol) [0x00007FF6F4364E09]\n\t(No symbol) [0x00007FF6F43BA724]\n\t(No symbol) [0x00007FF6F43AC574]\n\t(No symbol) [0x00007FF6F43DFF0A]\n\t(No symbol) [0x00007FF6F43ABE46]\n\t(No symbol) [0x00007FF6F43E0120]\n\t(No symbol) [0x00007FF6F44000B4]\n\t(No symbol) [0x00007FF6F43DFCB3]\n\t(No symbol) [0x00007FF6F43A9FB3]\n\t(No symbol) [0x00007FF6F43AB331]\n\tGetHandleVerifier [0x00007FF6F489A73D+3414941]\n\tGetHandleVerifier [0x00007FF6F48AE64A+3496618]\n\tGetHandleVerifier [0x00007FF6F48A413D+3454365]\n\tGetHandleVerifier [0x00007FF6F462848B+850155]\n\t(No symbol) [0x00007FF6F44D37FF]\n\t(No symbol) [0x00007FF6F44CF0C4]\n\t(No symbol) [0x00007FF6F44CF25D]\n\t(No symbol) [0x00007FF6F44BE079]\n\tBaseThreadInitThunk [0x00007FFA9EA3259D+29]\n\tRtlUserThreadStart [0x00007FFA9FCCAF38+40]\n"}} | headers=HTTPHeaderDict({'Content-Length': '1019', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:47,537 - DEBUG - Finished Request
+2025-01-24 20:15:47,537 - WARNING - 더보기 버튼이 현재 상호작용할 수 없는 상태입니다.
+2025-01-24 20:15:47,539 - INFO - 더보기 확장 완료
+2025-01-24 20:15:47,539 - DEBUG - GET http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97/source {}
+2025-01-24 20:15:47,706 - DEBUG - http://localhost:52410 "GET /session/88ede45c18414ec2a10c13209c086e97/source HTTP/1.1" 200 0
+2025-01-24 20:15:50,176 - DEBUG - Finished Request
+2025-01-24 20:15:50,940 - DEBUG - DELETE http://localhost:52410/session/88ede45c18414ec2a10c13209c086e97 {}
+2025-01-24 20:15:51,095 - DEBUG - http://localhost:52410 "DELETE /session/88ede45c18414ec2a10c13209c086e97 HTTP/1.1" 200 0
+2025-01-24 20:15:51,095 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:51,095 - DEBUG - Finished Request
+2025-01-24 20:15:53,538 - INFO - 리뷰 스크래핑 완료
+2025-01-24 20:15:53,539 - INFO - 데이터 저장 시작
+2025-01-24 20:15:53,548 - INFO - 데이터가 ../../database/reviews_diningcode.csv에 저장되었습니다.
+2025-01-24 20:15:53,566 - DEBUG - Started executable: `chromedriver` in a child process with pid: 27128
+2025-01-24 20:15:54,079 - DEBUG - POST http://localhost:52530/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}
+2025-01-24 20:15:54,080 - DEBUG - Starting new HTTP connection (1): localhost:52530
+2025-01-24 20:15:54,797 - DEBUG - http://localhost:52530 "POST /session HTTP/1.1" 200 0
+2025-01-24 20:15:54,797 - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"132.0.6834.84","chrome":{"chromedriverVersion":"132.0.6834.83 (03d59cf5ecf1d8444838ff9a1e96231304d4ff9c-refs/branch-heads/6834@{#3390})","userDataDir":"C:\\Users\\nickj\\AppData\\Local\\Temp\\scoped_dir27128_1843058978"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:52534"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"fc8c42eeace406aa1e06278b05491c54"}} | headers=HTTPHeaderDict({'Content-Length': '882', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:54,797 - DEBUG - Finished Request
+2025-01-24 20:15:54,806 - DEBUG - Started executable: `chromedriver` in a child process with pid: 10108
+2025-01-24 20:15:55,311 - DEBUG - POST http://localhost:52540/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}
+2025-01-24 20:15:55,312 - DEBUG - Starting new HTTP connection (1): localhost:52540
+2025-01-24 20:15:55,953 - DEBUG - http://localhost:52540 "POST /session HTTP/1.1" 200 0
+2025-01-24 20:15:55,953 - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"132.0.6834.84","chrome":{"chromedriverVersion":"132.0.6834.83 (03d59cf5ecf1d8444838ff9a1e96231304d4ff9c-refs/branch-heads/6834@{#3390})","userDataDir":"C:\\Users\\nickj\\AppData\\Local\\Temp\\scoped_dir10108_690891587"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:52545"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"dea3995acc24d8f554006e8e748f6de0"}} | headers=HTTPHeaderDict({'Content-Length': '881', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-24 20:15:55,953 - DEBUG - Finished Request
