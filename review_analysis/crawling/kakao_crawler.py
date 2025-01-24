@@ -3,6 +3,8 @@ import time
 import pandas as pd
 import sys
 from selenium import webdriver
+from typing import Optional
+from selenium.webdriver.chrome.webdriver import WebDriver
 from bs4 import BeautifulSoup
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
@@ -32,9 +34,9 @@ class ReviewCrawler(BaseCrawler):
         """
         super().__init__(output_dir)
         self.base_url = "https://place.map.kakao.com/17733090"
-        self.driver = None
+        self.driver: WebDriver = webdriver.Chrome()
         log_file = os.path.join(output_dir, "review_crawler.log")
-        self.logger = setup_logger(name="ReviewCrawler", log_file=log_file)
+        self.logger = setup_logger(log_file=log_file)
         self.data: pd.DataFrame = pd.DataFrame() 
 
     def start_browser(self):
