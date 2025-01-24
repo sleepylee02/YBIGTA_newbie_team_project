@@ -1,76 +1,39 @@
-2025-01-23 23:34:52,117 - DiningProcessor - INFO - Reading input file: ../../database/reviews_diningcode.csv
-2025-01-23 23:34:52,119 - DiningProcessor - INFO - Reading data from ../../database/reviews_diningcode.csv
-2025-01-23 23:34:52,119 - DiningProcessor - INFO - Starting preprocessing
-2025-01-23 23:34:52,120 - DiningProcessor - INFO - Missing values per column:
-2025-01-23 23:34:52,121 - DiningProcessor - INFO - Star        0
+2025-01-24 20:46:02,932 - INFO - Reading input file: ..\..\database\reviews_diningcode.csv
+2025-01-24 20:46:02,951 - INFO - Reading data from ..\..\database\reviews_diningcode.csv
+2025-01-24 20:46:02,952 - INFO - Starting preprocessing
+2025-01-24 20:46:02,966 - INFO - Missing values per column:
+2025-01-24 20:46:02,966 - INFO - Star        0
 Date        6
 Comment    19
 dtype: int64
-2025-01-23 23:34:52,121 - DiningProcessor - INFO - Dropped rows with missing values. Remaining rows: 201
-2025-01-23 23:34:53,407 - DiningProcessor - INFO - Preprocessing completed
-2025-01-23 23:34:53,454 - DiningProcessor - INFO - Starting feature engineering
-2025-01-23 23:34:53,455 - DiningProcessor - INFO - Feature engineering completed
-2025-01-23 23:34:53,457 - DiningProcessor - INFO - TF-IDF vectorization completed.
-2025-01-23 23:34:53,458 - DiningProcessor - INFO - Concatenated TF-IDF features with original data.
-2025-01-23 23:34:53,458 - DiningProcessor - INFO - 데이터 저장 시작
-2025-01-23 23:34:53,465 - DiningProcessor - INFO - 데이터가 ../../database/reviews_diningcode.csv에 저장되었습니다.
-2025-01-23 23:36:24,565 - DiningProcessor - INFO - Reading input file: ../../database/reviews_diningcode.csv
-2025-01-23 23:36:24,570 - DiningProcessor - INFO - Reading data from ../../database/reviews_diningcode.csv
-2025-01-23 23:36:24,570 - DiningProcessor - INFO - Starting preprocessing
-2025-01-23 23:36:24,571 - DiningProcessor - INFO - Missing values per column:
-2025-01-23 23:36:24,571 - DiningProcessor - INFO - Star              7
-Date              7
-Comment           7
-processed_text    8
-day_of_week       7
-                 ..
-포장                7
-품절                7
-필수                7
-행복                7
-회전                7
-Length: 107, dtype: int64
-2025-01-23 23:36:24,572 - DiningProcessor - INFO - Dropped rows with missing values. Remaining rows: 194
-2025-01-23 23:36:24,572 - DiningProcessor - ERROR - Preprocessing failed: Can only use .str accessor with string values!
-2025-01-23 23:36:44,669 - DiningProcessor - INFO - Reading input file: ../../database/reviews_diningcode.csv
-2025-01-23 23:36:44,675 - DiningProcessor - INFO - Reading data from ../../database/reviews_diningcode.csv
-2025-01-23 23:36:44,675 - DiningProcessor - INFO - Starting preprocessing
-2025-01-23 23:36:44,676 - DiningProcessor - INFO - Missing values per column:
-2025-01-23 23:36:44,676 - DiningProcessor - INFO - Star              7
-Date              7
-Comment           7
-processed_text    8
-day_of_week       7
-                 ..
-포장                7
-품절                7
-필수                7
-행복                7
-회전                7
-Length: 107, dtype: int64
-2025-01-23 23:36:44,677 - DiningProcessor - INFO - Dropped rows with missing values. Remaining rows: 194
-2025-01-23 23:36:44,677 - DiningProcessor - ERROR - Preprocessing failed: Can only use .str accessor with string values!
-2025-01-23 23:40:18,641 - DiningProcessor - INFO - Reading input file: ../../database/reviews_diningcode.csv
-2025-01-23 23:40:18,648 - DiningProcessor - INFO - Reading data from ../../database/reviews_diningcode.csv
-2025-01-23 23:40:18,648 - DiningProcessor - INFO - Starting preprocessing
-2025-01-23 23:40:18,649 - DiningProcessor - INFO - Missing values per column:
-2025-01-23 23:40:18,649 - DiningProcessor - INFO - Star              7
-Date              7
-Comment           7
-processed_text    8
-day_of_week       7
-                 ..
-포장                7
-품절                7
-필수                7
-행복                7
-회전                7
-Length: 107, dtype: int64
-2025-01-23 23:40:18,650 - DiningProcessor - INFO - Dropped rows with missing values. Remaining rows: 194
-2025-01-23 23:40:19,858 - DiningProcessor - INFO - Preprocessing completed
-2025-01-23 23:40:19,911 - DiningProcessor - INFO - Starting feature engineering
-2025-01-23 23:40:19,912 - DiningProcessor - INFO - Feature engineering completed
-2025-01-23 23:40:19,914 - DiningProcessor - INFO - TF-IDF vectorization completed.
-2025-01-23 23:40:19,914 - DiningProcessor - INFO - Concatenated TF-IDF features with original data.
-2025-01-23 23:40:19,914 - DiningProcessor - INFO - 데이터 저장 시작
-2025-01-23 23:40:19,924 - DiningProcessor - INFO - Data saved successfully at ../../database/preprocessed_reviews_diningcode.csv.
+2025-01-24 20:46:02,970 - INFO - Dropped rows with missing values. Remaining rows: 201
+2025-01-24 20:46:07,152 - INFO - Preprocessing completed
+2025-01-24 20:46:07,231 - INFO - Starting feature engineering
+2025-01-24 20:46:07,240 - INFO - Feature engineering completed
+2025-01-24 20:46:07,246 - INFO - TF-IDF vectorization completed.
+2025-01-24 20:46:07,251 - INFO - Concatenated TF-IDF features with original data.
+2025-01-24 20:46:07,252 - INFO - ������ ���� ����
+2025-01-24 20:46:07,266 - INFO - Data saved successfully at ../../database\preprocessed_reviews_diningcode.csv.
+2025-01-24 20:46:08,113 - INFO - Reading data from ..\..\database\reviews_google.csv
+2025-01-24 20:46:08,114 - INFO - Starting preprocessing
+2025-01-24 20:46:08,115 - INFO - Dropped rows with missing values. Remaining rows: 728
+2025-01-24 20:46:08,116 - INFO - Filtered invalid star ratings. Remaining rows: 728
+2025-01-24 20:46:11,297 - INFO - Completed text preprocessing
+2025-01-24 20:46:11,297 - INFO - Starting feature engineering
+2025-01-24 20:46:11,307 - INFO - TF-IDF vectorization completed.
+2025-01-24 20:46:11,309 - INFO - Concatenated TF-IDF features with original data.
+2025-01-24 20:46:11,310 - INFO - Starting data saving
+2025-01-24 20:46:11,356 - INFO - Data saved successfully at ../../database\preprocessed_reviews_google.csv.
+2025-01-24 20:46:12,929 - INFO - Original data shape: (1942, 3)
+2025-01-24 20:46:12,943 - INFO - Data shape after dropping NaNs: (1255, 3)
+2025-01-24 20:46:12,945 - INFO - Data shape after converting 'score' to numeric: (1255, 3)
+2025-01-24 20:46:12,946 - INFO - Data shape after removing invalid scores: (1255, 3)
+2025-01-24 20:46:12,953 - INFO - Data shape after date parsing: (1255, 3)
+2025-01-24 20:46:12,957 - INFO - Data shape after filtering dates within 5 years: (1181, 3)
+2025-01-24 20:46:15,721 - INFO - Completed text cleaning with Kiwi + stopwords removal.
+2025-01-24 20:46:15,723 - INFO - Data shape after filtering 'clean_review' length >= 5: (897, 5) (Removed 284 rows)
+2025-01-24 20:46:15,724 - INFO - Data shape after removing empty 'clean_review': (897, 5)
+2025-01-24 20:46:15,726 - INFO - Feature engineering completed.
+2025-01-24 20:46:15,735 - INFO - TF-IDF vectorization completed.
+2025-01-24 20:46:15,736 - INFO - Concatenated TF-IDF features with original data.
+2025-01-24 20:46:15,795 - INFO - Data saved successfully at ../../database\preprocessed_reviews_kakao.csv.
