@@ -15,13 +15,13 @@ _리뷰 데이터 수집_
 
 장소: **성심당**
 
-크롤링 사이트:
+데이터 소개:
 
-+ 구글 맵 ()
-+ 
++ 구글 맵 : 사용자 이름, 사용자 정보, 별점, 날짜, 리뷰, 사진/ 각 지점별 3000개 이상/ (https://www.google.com/maps/place/%EC%84%B1%EC%8B%AC%EB%8B%B9+DCC%EC%A0%90/data=!4m8!3m7!1s0x3565498ff8570165:0x8cd47008647df355!8m2!3d36.3753313!4d127.3924207!9m1!1b1!16s%2Fg%2F11f0kvfpj0?entry=ttu&g_ep=EgoyMDI1MDEyMS4wIKXMDSoASAFQAw%3D%3D, https://www.google.com/maps/place/Sungsimdang+Bakery+Lotte+Daejeon+Branch/data=!4m8!3m7!1s0x3565495a46274a79:0x5b973bd3cfd7d125!8m2!3d36.3403653!4d127.3901764!9m1!1b1!16s%2Fg%2F1ptxmrrlz?entry=ttu&g_ep=EgoyMDI1MDEyMS4wIKXMDSoASAFQAw%3D%3D, https://www.google.com/maps/place/%EC%84%B1%EC%8B%AC%EB%8B%B9+%EB%B3%B8%EC%A0%90/data=!4m8!3m7!1s0x356548d8f73d355d:0x69e930d902c95eca!8m2!3d36.3276832!4d127.4273424!9m1!1b1!16s%2Fg%2F1tct_8rr?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D)
++ 카카오 지도 : 사용자 이름, 사용자 정보, 날짜, 별점, 리뷰, 태그/ 총 5000개 이상/ (https://place.map.kakao.com/17733090)
++ 다이닝 코드 : 사용자 이름, 사용자 정보, 별점, 평가, 리뷰, 사진, 태그 / 총 200개 이상/(https://www.diningcode.com/profile.php?rid=LtMjLaf0kZJC)
 
-
-실행방법:
+실행방법: 
 
 
 ---
