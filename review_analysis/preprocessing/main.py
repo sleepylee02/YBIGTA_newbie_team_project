@@ -7,12 +7,14 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")
 from review_analysis.preprocessing.base_processor import BaseDataProcessor
 from review_analysis.preprocessing.kakao_processor import KakaoProcessor
 from review_analysis.preprocessing.google_processor import GoogleProcessor
+from review_analysis.preprocessing.diningcode_processor import DiningcodeProcessor
 
 # 모든 preprocessing 클래스를 예시 형식으로 적어주세요. 
 # key는 "reviews_사이트이름"으로, value는 해당 처리를 위한 클래스
 PREPROCESS_CLASSES: Dict[str, Type[BaseDataProcessor]] = {
     "reviews_kakao": KakaoProcessor,
     "reviews_google": GoogleProcessor
+    "reviews_diningcode": DiningcodeProcessor
     # key는 크롤링한 csv파일 이름으로 적어주세요! ex. reviews_naver.csv -> reviews_naver
 }
 
@@ -28,6 +30,7 @@ def create_parser() -> ArgumentParser:
     return parser
 
 if __name__ == "__main__":
+    print(REVIEW_COLLECTIONS)
 
     parser = create_parser()
     args = parser.parse_args()
