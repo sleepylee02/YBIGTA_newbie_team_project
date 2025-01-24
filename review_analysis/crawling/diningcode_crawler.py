@@ -8,20 +8,44 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
 import time
-from review_analysis.crawling.utils.logger import setup_logger
+from utils.logger import setup_logger
 import os
 
 
 class DiningCrawler(BaseCrawler):
-    def __init__(self, output_dir: str, driver_path: str = None):
+    """
+    DiningCrawler 클래스
+
+    DiningCrawler는 DiningCode 웹사이트에서 리뷰 데이터를 크롤링하고, 크롤링한 데이터를 DataFrame으로 저장한 뒤 CSV 파일로 출력하는 기능을 제공합니다.
+
+    Attributes:
+        base_url (str): 크롤링할 대상 DiningCode 페이지 URL.
+        logger (logging.Logger): 로깅을 위한 Logger 객체.
+        reviews_df (pd.DataFrame): 크롤링한 리뷰 데이터를 저장하는 DataFrame.
+    """
+
+    def __init__(self, output_dir: str):
+        """
+        DiningCrawler 객체를 초기화합니다.
+
+        Args:
+            output_dir (str): 크롤링한 데이터를 저장할 디렉토리 경로.
+        """
+
         super().__init__(output_dir)
         self.base_url = 'https://www.diningcode.com/profile.php?rid=LtMjLaf0kZJC'
-        self.driver_path = driver_path
 
         log_file = os.path.join(output_dir, "DiningCrawler.log")
-        self.logger = setup_logger("DiningCrawler", log_file)
+        self.logger = setup_logger(log_file)
         
     def start_browser(self):
+        """
+        Selenium WebDriver를 초기화하고 DiningCode 페이지를 엽니다.
+
+        Raises:
+            Exception: 브라우저 초기화 실패 시 발생.
+        """
+
         self.logger.info("브라우저 시작 중...")
         # options = webdriver.ChromeOptions()
         # options.add_argument("--no-sandbox")
@@ -35,6 +59,23 @@ class DiningCrawler(BaseCrawler):
         self.logger.info("브라우저 시작 완료")
     
     def scrape_reviews(self):
+        """
+        DiningCode 웹사이트에서 리뷰 데이터를 크롤링합니다.
+
+        Steps:
+            1. 웹페이지를 열고 "더보기" 버튼을 반복적으로 클릭하여 모든 리뷰를 로드합니다.
+            2. BeautifulSoup으로 HTML을 파싱하여 리뷰 데이터를 추출합니다.
+            3. 추출한 데이터를 DataFrame에 저장합니다.
+
+        Raises:
+            NoSuchElementException: "더보기" 버튼이 없는 경우 발생.
+            ElementClickInterceptedException: 버튼 클릭이 방해받는 경우 발생.
+            ElementNotInteractableException: 버튼이 상호작용할 수 없는 상태인 경우 발생.
+
+        Returns:
+            None
+        """
+
         self.start_browser()
         self.logger.info("브라우저 시작 완료")
         while True:
@@ -99,6 +140,17 @@ class DiningCrawler(BaseCrawler):
         self.logger.info("리뷰 스크래핑 완료")
     
     def save_to_database(self):
+        """
+        크롤링한 리뷰 데이터를 CSV 파일로 저장합니다.
+
+        Steps:
+            1. output_dir 경로에 디렉토리를 생성합니다.
+            2. reviews_diningcode.csv 파일에 데이터를 저장합니다.
+
+        Returns:
+            None
+        """
+
         self.logger.info("데이터 저장 시작")
         # CSV 파일로 저장
         output_path = f"{self.output_dir}/reviews_diningcode.csv"

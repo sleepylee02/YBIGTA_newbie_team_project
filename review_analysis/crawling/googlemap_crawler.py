@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from datetime import datetime, timedelta
-from typing import Optional
+from typing import Optional, cast
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 from utils.logger import setup_logger
@@ -36,10 +36,11 @@ class GoogleMapsCrawler(BaseCrawler):
                           "https://www.google.com/maps/place/Sungsimdang+Bakery+Lotte+Daejeon+Branch/data=!4m8!3m7!1s0x3565495a46274a79:0x5b973bd3cfd7d125!8m2!3d36.3403653!4d127.3901764!9m1!1b1!16s%2Fg%2F1ptxmrrlz?entry=ttu&g_ep=EgoyMDI1MDEyMS4wIKXMDSoASAFQAw%3D%3D",
                           "https://www.google.com/maps/place/%EC%84%B1%EC%8B%AC%EB%8B%B9+%EB%B3%B8%EC%A0%90/data=!4m8!3m7!1s0x356548d8f73d355d:0x69e930d902c95eca!8m2!3d36.3276832!4d127.4273424!9m1!1b1!16s%2Fg%2F1tct_8rr?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D"
                           ]
+        self.current_url: Optional[str] = None
         log_file = os.path.join(output_dir, "google_maps_crawler.log")
-        self.logger = setup_logger(name="GoogleMapsCrawler", log_file=log_file)
+        self.logger = setup_logger(log_file=log_file)
 
-    def start_browser(self, url : str) -> None:
+    def start_browser(self) -> None:
         """
         Selenium WebDriver를 초기화하고 브라우저를 시작합니다.
 
@@ -53,10 +54,11 @@ class GoogleMapsCrawler(BaseCrawler):
         chrome_options.add_argument("--start-maximized")
 
         self.driver = webdriver.Chrome(options=chrome_options)
-        self.driver.get(url)
+        self.driver.get(cast(str,self.current_url))
         self.driver.implicitly_wait(3)
         time.sleep(3)
         self.logger.info("브라우저가 성공적으로 시작되었습니다.")
+        return 
 
     def scrape_reviews(self, max_reviews: int = 1000) -> pd.DataFrame:
         """
@@ -70,7 +72,8 @@ class GoogleMapsCrawler(BaseCrawler):
         """
         all_reviews = []
         for url in self.base_urls:
-            self.start_browser(url)
+            self.current_url = url
+            self.start_browser()
             try:
                 # 스크롤 영역 탐색
                 self.logger.info("스크롤 영역을 탐색합니다.")
@@ -156,15 +159,23 @@ class GoogleMapsCrawler(BaseCrawler):
                     
         self.data = pd.DataFrame(all_reviews)
         self.save_to_database()
-
+        return self.data
 
     def save_to_database(self) -> None:
         """
-        Save the scraped reviews to a CSV file.
+        크롤링한 리뷰 데이터를 CSV 파일로 저장합니다.
+
+        Steps:
+            1. output_dir 경로에 디렉토리를 생성합니다.
+            2. reviews_google.csv 파일에 데이터를 저장합니다.
 
         Raises:
-            Exception: If saving the file fails.
+            Exception: 데이터 저장에 실패할 경우 발생.
+
+        Returns:
+            None
         """
+
         self.logger.info("Saving data to the output directory...")
         try:
             os.makedirs(self.output_dir, exist_ok=True)

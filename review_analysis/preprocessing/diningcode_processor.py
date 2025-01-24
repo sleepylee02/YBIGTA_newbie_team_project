@@ -1,7 +1,7 @@
 from review_analysis.preprocessing.base_processor import BaseDataProcessor
 import os
 import pandas as pd
-from review_analysis.crawling.utils.logger import setup_logger
+from utils.logger import setup_logger
 import re
 from kiwipiepy import Kiwi
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -15,7 +15,7 @@ class DiningcodeProcessor(BaseDataProcessor):
         
         # Logger 초기화
         log_file = os.path.join(output_dir, "DiningProcessor.log")
-        self.logger = setup_logger("DiningProcessor", log_file)
+        self.logger = setup_logger(log_file)
 
         # 데이터 읽기 메서드 호출
         self.df = self._read_input()
