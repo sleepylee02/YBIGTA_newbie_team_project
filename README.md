@@ -51,8 +51,22 @@ TEAM 1
 ---
 ## EDA/FE, 시각화
 **1. 개별 EDA** 
+(review_analysis/plots/diningcode_date.png)
+(review_analysis/plots/diningcode_dayofweek.png)
+(review_analysis/plots/diningcode_star.png)
+
    + 다이닝 코드: Weekly average star ratings- 초기에는 평점이 극단적으로 낮거나 높은 주가 간헐적으로 나타나며, 이후 비교적 안정적인 패턴을 보임, 2022년 이후부터 평균 평점이 비교적 4.5 ~ 5.0 사이에서 안정적으로 유지, 일부 주차에서 평균 평점이 2.0 근처로 급격히 하락한 경우가 관찰됨. 이는 특정 사건이나 서비스 품질 저하와 관련될 가능성이 있음. Average Star Ratings by Day of the Week- 수요일과 금요일이 각각 평균 4.84, 4.83으로 가장 높은 평점, 화요일이 평균 4.43으로 가장 낮은 평점을 보이며, 다른 요일과의 차이가 상대적으로 큼. 주중 중반부 또는 주말 직전에 방문 했을 때 가장 높은 사용자 만족도를 주는 것으로 보임. 주말보다 평일에 더 긍정적인 평가를 받음. Star Ratings Distribution- 5점 평점이 70프로 이상 차지하고 1 ~ 3점의 평점이 5프로 미만으로 매우 긍정적인 리뷰를 받고 있음.
+
+(review_analysis/plots/google_date_distribution.png)
+(review_analysis/plots/google_rating_distribution.png)
+(review_analysis/plots/google_review_length_distribution.png)
+
    + 구글 맵: plot_review_length_distribution- 리뷰 길이가 짧은 데이터가 매우 많고 긴 데이터일 수록 빈도가 급격히 감소하는 long tail 형태를 보임, plot_rating_distribution- 4과 5점이 대부분의 리뷰를 차지하며 5점의 비율이 압도적으로 많은 것으로 보아 장소에 대한 긍정적인 평가가 보임, plot_date_distribution- 2023년부터 리뷰수가 급증하였고 2024년에 가장 많은 리뷰가 있음, 최신 데이터 집중 경향으로 과거 데이터가 상대적으로 부족함을 보임.
+
+(review_analysis/plots/kakao_date_distribution.png)
+(review_analysis/plots/kakao_rating_distribution.png)
+(review_analysis/plots/kakao_review_length_distribution.png)
+
    + 카카오 지도: plot_rating_distribution- 평점 5.0의 데이터가 압도적으로 많고 대부분의 데이터가 4점 또는 5점으로 클래스 불균형 형태를 보임, 장소가 전반적으로 높은 사용자 만족도를 제공함을 의미, plot_review_length_distribution- 리뷰 길이가 50 이하인 데이터에 집중되어 있고, 긴 리뷰일수록 빈도가 점차적으로 감소하는 우측 왜도 형태를 보임, 이는 사용자가 간단한 의견만 남기거나 단어 수준의 짧은 피드백을 주로 작성했음을 의미함, plot_date_distribution- 초기 데이터가 부족하나 점차 리뷰 수가 증가함
    
 **2. 개별 데이터 전처리/FE**
