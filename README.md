@@ -51,6 +51,7 @@ TEAM 1
 ---
 ## EDA/FE, 시각화
 **1. 개별 EDA** 
+
 ![diningcode_date](review_analysis/plots/diningcode_date.png)
 ![diningcode_dayofweek](review_analysis/plots/diningcode_dayofweek.png)
 ![diningcode_star](review_analysis/plots/diningcode_star.png)
