@@ -1,6 +1,6 @@
 # YBIGTA Newbie Team Project
 
-## 팀 소개
+# 팀 소개
 
 TEAM 1
 
@@ -9,40 +9,42 @@ TEAM 1
 - **강정묵**: 안녕하세요. 22학번 응용통계학과 강정묵입니다.
 
 ---
-## 크롤링 프로젝트
+# 성심당 리뷰 데이터 크롤링 프로젝트
 
-_리뷰 데이터 수집_
+## 데이터 소개
 
-장소: **성심당**
+### 구글 맵
+- 데이터 개수: 총 1000개  
+- 데이터 형식: CSV  
+- 열 이름: 리뷰, 날짜, 별점  
+- 대상 지점 및 링크:
+  - [성심당 DCC점](https://www.google.com/maps/place/%EC%84%B1%EC%8B%AC%EB%8B%B9+DCC%EC%A0%90/data=!4m8!3m7!1s0x3565498ff8570165:0x8cd47008647df355!8m2!3d36.3753313!4d127.3924207!9m1!1b1!16s%2Fg%2F11f0kvfpj0?entry=ttu&g_ep=EgoyMDI1MDEyMS4wIKXMDSoASAFQAw%3D%3D)  
+  - [성심당 롯데백화점 대전점](https://www.google.com/maps/place/Sungsimdang+Bakery+Lotte+Daejeon+Branch/data=!4m8!3m7!1s0x3565495a46274a79:0x5b973bd3cfd7d125!8m2!3d36.3403653!4d127.3901764!9m1!1b1!16s%2Fg%2F1ptxmrrlz?entry=ttu&g_ep=EgoyMDI1MDEyMS4wIKXMDSoASAFQAw%3D%3D)  
+  - [성심당 본점](https://www.google.com/maps/place/%EC%84%B1%EC%8B%AC%EB%8B%B9+%EB%B3%B8%EC%A0%90/data=!4m8!3m7!1s0x356548d8f73d355d:0x69e930d902c95eca!8m2!3d36.3276832!4d127.4273424!9m1!1b1!16s%2Fg%2F1tct_8rr?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D)  
 
-데이터 소개:
+### 카카오맵
+- 데이터 개수: 총 1942개  
+- 데이터 형식: CSV  
+- 열 이름: 리뷰, 날짜, 별점  
+- 대상 지점 및 링크:
+  - [성심당 본점](https://place.map.kakao.com/17733090)  
 
-+ 구글 맵 : 사용자 이름, 사용자 정보, 별점, 날짜, 리뷰, 사진/ 각 지점별 3000개 이상/ (https://www.google.com/maps/place/%EC%84%B1%EC%8B%AC%EB%8B%B9+DCC%EC%A0%90/data=!4m8!3m7!1s0x3565498ff8570165:0x8cd47008647df355!8m2!3d36.3753313!4d127.3924207!9m1!1b1!16s%2Fg%2F11f0kvfpj0?entry=ttu&g_ep=EgoyMDI1MDEyMS4wIKXMDSoASAFQAw%3D%3D, https://www.google.com/maps/place/Sungsimdang+Bakery+Lotte+Daejeon+Branch/data=!4m8!3m7!1s0x3565495a46274a79:0x5b973bd3cfd7d125!8m2!3d36.3403653!4d127.3901764!9m1!1b1!16s%2Fg%2F1ptxmrrlz?entry=ttu&g_ep=EgoyMDI1MDEyMS4wIKXMDSoASAFQAw%3D%3D, https://www.google.com/maps/place/%EC%84%B1%EC%8B%AC%EB%8B%B9+%EB%B3%B8%EC%A0%90/data=!4m8!3m7!1s0x356548d8f73d355d:0x69e930d902c95eca!8m2!3d36.3276832!4d127.4273424!9m1!1b1!16s%2Fg%2F1tct_8rr?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D)
-+ 카카오 지도 : 사용자 이름, 사용자 정보, 날짜, 별점, 리뷰, 태그/ 총 5000개 이상/ (https://place.map.kakao.com/17733090)
-+ 다이닝 코드 : 사용자 이름, 사용자 정보, 별점, 평가, 리뷰, 사진, 태그 / 총 200개 이상/(https://www.diningcode.com/profile.php?rid=LtMjLaf0kZJC)
+### 다이닝 코드
+- 데이터 개수: 총 228개  
+- 데이터 형식: CSV  
+- 열 이름: 리뷰, 날짜, 별점  
+- 대상 지점 및 링크:
+  - [성심당 본점](https://www.diningcode.com/profile.php?rid=LtMjLaf0kZJC)  
 
-실행방법: 
+---
 
-1. 명령어 분석
+## 실행 방법
 
-ArgumentParser를 사용해 명령줄에서 입력된 옵션을 처리
-
-+ args.output_dir: 저장 디렉토리
-+ args.crawler: 특정 크롤러 이름
-+ args.all: 모든 크롤러를 실행하는 플래그
-
-2. 크롤링 작업
-
-+ args.all이 True이면, CRAWLER_CLASSES에 등록된 모든 크롤러를 순차적으로 실행
-+ args.crawler가 제공되면, 해당 크롤러만 실행
-+ 둘 다 없는 경우, ValueError("No crawlers.") 에러를 발생
-
-3. 크롤러 실행
-각 크롤러는 다음 메서드를 호출:
-
-+ scrape_reviews(): 리뷰 데이터 수집
-+ save_to_database(): 수집된 데이터 저장
-
+1. 디렉토리를 다음과 같이 설정합니다:  
+   `YBIGTA_newbie_team_project/review_analysis/crawling`
+2. 다음 명령어를 실행합니다:
+   ```bash
+   python main.py -o ../../database --all
 
 ---
 ## EDA/FE, 시각화
@@ -74,7 +76,7 @@ ArgumentParser를 사용해 명령줄에서 입력된 옵션을 처리
 ![Hwiplash](github/merged_Hwiplash.png)
 ---
 
-## 프로젝트 소개
+# FastAPI 프로젝트
 이 프로젝트는 FastAPI를 기반으로 사용자 관리 기능(로그인, 회원가입, 계정 삭제, 비밀번호 변경)을 제공하는 웹 애플리케이션입니다. 사용자는 간단한 절차를 통해 계정을 생성하고, 로그인하여 서비스를 이용할 수 있습니다.
 
 ---
