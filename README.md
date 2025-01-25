@@ -45,6 +45,8 @@ TEAM 1
 2. 다음 명령어를 실행합니다:
    ```bash
    python main.py -o ../../database --all
+3. 결과:
+   `YBIGTA_newbie_team_project/database`에 `review_{사이트명}.csv`가 모두 생성됩니다.
 
 ---
 ## EDA/FE, 시각화
