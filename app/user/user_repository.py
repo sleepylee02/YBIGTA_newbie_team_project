@@ -1,33 +1,57 @@
-import json
+from typing import List, Optional
+from sqlalchemy.orm import Session
+from sqlalchemy import select, Column, String
+from database.mysql_connection import Base  # same Base as before
+from app.user.user_schema import User as PydanticUser  # your Pydantic user schema
 
-from typing import Dict, Optional
+# SQLAlchemy ORM model for the "users" table
+class User(Base):
+    __tablename__ = "users"
 
-from app.user.user_schema import User
-from app.config import USER_DATA
+    # Match the test's CREATE TABLE columns exactly
+    email = Column(String, primary_key=True)
+    password = Column(String, nullable=False)
+    username = Column(String, nullable=False)
 
 class UserRepository:
-    def __init__(self) -> None:
-        self.users: Dict[str, dict] = self._load_users()
-
-    def _load_users(self) -> Dict[str, Dict]:
-        try:
-            with open(USER_DATA, "r") as f:
-                return json.load(f)
-        except FileNotFoundError:
-            raise ValueError("File not found")
+    def __init__(self, db_session: Session) -> None:
+        self.db_session = db_session
 
     def get_user_by_email(self, email: str) -> Optional[User]:
-        user = self.users.get(email)
-        return User(**user) if user else None
+        return self.db_session.execute(
+            select(User).where(User.email == email)
+        ).scalars().first()
 
-    def save_user(self, user: User) -> User: 
-        self.users[user.email] = user.model_dump()
-        with open(USER_DATA, "w") as f:
-            json.dump(self.users, f)
-        return user
+    def save_user(self, user: PydanticUser) -> User:
+        """Insert or update a user (based on email)"""
+        # Check if there's an existing user
+        existing_user = self.get_user_by_email(user.email)
+        if existing_user:
+            # Update existing
+            existing_user.password = user.password
+            existing_user.username = user.username
+            self.db_session.commit()
+            self.db_session.refresh(existing_user)
+            return existing_user
+        else:
+            # Insert new
+            new_user = User(
+                email=user.email,
+                password=user.password,
+                username=user.username
+            )
+            self.db_session.add(new_user)
+            self.db_session.commit()
+            self.db_session.refresh(new_user)
+            return new_user
 
-    def delete_user(self, user: User) -> User:
-        del self.users[user.email]
-        with open(USER_DATA, "w") as f:
-            json.dump(self.users, f)
-        return user
+    def delete_user(self, user: PydanticUser) -> Optional[User]:
+        orm_user = self.get_user_by_email(user.email)
+        if orm_user:
+            self.db_session.delete(orm_user)
+            self.db_session.commit()
+            return orm_user
+        return None
+
+    def get_users(self) -> List[User]:
+        return self.db_session.execute(select(User)).scalars().all()
