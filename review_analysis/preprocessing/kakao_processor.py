@@ -8,6 +8,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer # type : ignore
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 from kiwipiepy import Kiwi # type : ignore
+import os
+
 
 class KakaoProcessor(BaseDataProcessor):
     """
@@ -20,7 +22,9 @@ class KakaoProcessor(BaseDataProcessor):
         super().__init__(input_path, output_dir)
         self.data = None
         # Stopwords 불러오기
-        with open('stopwords-ko.txt', 'r', encoding='utf-8') as f:
+        current_dir = os.path.dirname(os.path.abspath(__file__))  # This gets the directory of kakao_processor.py
+        stopwords_path = os.path.join(current_dir, 'stopwords-ko.txt')
+        with open(stopwords_path, 'r', encoding='utf-8') as f:
             self.stopwords = [line.strip() for line in f.readlines()]
 
         # Kiwi 초기화 
