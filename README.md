@@ -9,13 +9,13 @@ TEAM 1
 - **강정묵**: 안녕하세요. 22학번 응용통계학과 강정묵입니다.
 
 ---
-#DB/DOCKER/AWS 과제
+# DB/DOCKER/AWS 과제
 
-##Docker hub 주소
+## Docker hub 주소
 Docker hub 주소 : https://hub.docker.com/repository/docker/sleepylee02/ybigta-api/general
 Docker hub command : docker pull sleepylee02/ybigta-api:latest
 
-##Api 실행
+## Api 실행
 - delete-api
 ![delete-api](./aws/delete_api.png)
 - login-api
@@ -28,10 +28,10 @@ Docker hub command : docker pull sleepylee02/ybigta-api:latest
 ![preprocess-diningcode](./aws/preprocess_diningcode.png)
 - preprocess-google
 ![preprocess-google](./aws/preprocess_google.png)
-- oreprocess-kakao
+- preprocess-kakao
 ![preprocess-kakao](./aws/preprocess_kakao.png)
 
-##Github Action
+## Github Action
 ![Image Description](./aws/github_action.png)
 
 
