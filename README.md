@@ -9,6 +9,35 @@ TEAM 1
 - **강정묵**: 안녕하세요. 22학번 응용통계학과 강정묵입니다.
 
 ---
+#DB/DOCKER/AWS 과제
+
+##Docker hub 주소
+Docker hub 주소 : https://hub.docker.com/repository/docker/sleepylee02/ybigta-api/general
+Docker hub command : docker pull sleepylee02/ybigta-api:latest
+
+##Api 실행
+- delete-api
+![delete-api](./aws/delete_api.png)
+- login-api
+![login-api](./aws/login_api.png)
+- password-api
+![password-api](./aws/password_api.png)
+- register-api
+![register-api](./aws/register_api.png)
+- preprocess-diningcode
+![preprocess-diningcode](./aws/preprocess_diningcode.png)
+- preprocess-google
+![preprocess-google](./aws/preprocess_google.png)
+- oreprocess-kakao
+![preprocess-kakao](./aws/preprocess_kakao.png)
+
+##Github Action
+![Image Description](./aws/github_action.png)
+
+
+
+
+---
 # 성심당 리뷰 데이터 크롤링 프로젝트
 
 ## 데이터 소개
