@@ -13,6 +13,7 @@ TEAM 1
 
 ##Docker hub 주소
 Docker hub 주소 : https://hub.docker.com/repository/docker/sleepylee02/ybigta-api/general
+
 Docker hub command : docker pull sleepylee02/ybigta-api:latest
 
 ##Api 실행
