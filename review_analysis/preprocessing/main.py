@@ -44,5 +44,5 @@ if __name__ == "__main__":
                 preprocessor_class = PREPROCESS_CLASSES[base_name]
                 preprocessor = preprocessor_class(csv_file, args.output_dir)
                 preprocessor.preprocess()
-                preprocessor.feature_engineering()
+                #preprocessor.feature_engineering()
                 preprocessor.save_to_database()

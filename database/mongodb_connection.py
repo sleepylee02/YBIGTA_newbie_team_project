@@ -21,7 +21,14 @@ load_dotenv()
 mongo_url = os.getenv("MONGO_URL")
 
 # Connect to MongoDB
-mongo_client = MongoClient(mongo_url)
+try:
+    mongo_client = MongoClient(mongo_url)
+    mongo_client.admin.command('ping')  # Test connection
+    print("Successfully connected to MongoDB Atlas")
+except Exception as e:
+    print(f"MongoDB Atlas Connection Error: {e}")
+    raise
+
 mongo_db = mongo_client["smile"]
 
 # Define preprocessing class mapping
@@ -31,8 +38,25 @@ PREPROCESS_CLASSES: Dict[str, Type[BaseDataProcessor]] = {
     "reviews_diningcode": DiningcodeProcessor
 }
 
+def get_mongo_db():
+    """MongoDB 데이터베이스 객체 반환"""
+    return mongo_db
+
 # FastAPI app
 app = FastAPI()
+
+# HOW TO USE
+# 1. CHECK CONNECTIVITY : curl -X GET 'http://127.0.0.1:8000/ping' -H 'accept: application/json'
+# 2. PREPROCESS FILES : curl -X POST 'http://127.0.0.1:8000/review/preprocess/reviews_kakao' -H 'accept: application/json'
+
+@app.get("/ping")
+async def ping():
+    try:
+        mongo_client.admin.command('ping')
+        return {"message": "MongoDB Atlas is connected!"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"MongoDB Connection Error: {str(e)}")
+
 
 def save_mongo_to_csv(documents, temp_csv_path):
     """ Converts MongoDB documents to a CSV file for processing """
@@ -88,12 +112,3 @@ def preprocess_data_and_store(collection_name: str):
     os.remove(temp_csv_path)
 
     return {"message": f"Processed {len(processed_data)} documents and stored in {collection_name}_processed"}
-
-@app.post("/review/preprocess/{site_name}")
-async def preprocess_review(site_name: str):
-    """ API Endpoint to preprocess data for a given review site """
-    if site_name not in PREPROCESS_CLASSES:
-        raise HTTPException(status_code=400, detail="Invalid site name. Choose from: reviews_kakao, reviews_google, reviews_diningcode")
-    
-    result = preprocess_data_and_store(site_name)
-    return result

@@ -1,0 +1,14 @@
+# 환경 변수 파일 제외
+.env
+
+# Python 캐시 파일 제외
+__pycache__/
+*.pyc
+*.pyo
+
+# 가상 환경 제외
+venv/
+.venv/
+
+# IDE 설정 파일 제외 (필요 없으면 삭제)
+.vscode/
