@@ -67,32 +67,32 @@ class KakaoProcessor(BaseDataProcessor):
         ]
         self.logger.info(f"Data shape after filtering dates within 5 years: {self.data.shape}")
 
-        # 5) 텍스트 전처리(Kiwi + stopwords) 후 길이 필터
-        self.data['clean_review'] = self.data['review'].apply(self.clean_text)
-        self.logger.info("Completed text cleaning with Kiwi + stopwords removal.")
+        # # 5) 텍스트 전처리(Kiwi + stopwords) 후 길이 필터
+        # self.data['clean_review'] = self.data['review'].apply(self.clean_text)
+        # self.logger.info("Completed text cleaning with Kiwi + stopwords removal.")
 
-        self.data['clean_review_length'] = self.data['clean_review'].apply(len)
-        initial_shape = self.data.shape
-        self.data = self.data[self.data['clean_review_length'] >= 5]
-        self.logger.info(
-            f"Data shape after filtering 'clean_review' length >= 5: {self.data.shape} "
-            f"(Removed {initial_shape[0] - self.data.shape[0]} rows)"
-        )
+        # self.data['clean_review_length'] = self.data['clean_review'].apply(len)
+        # initial_shape = self.data.shape
+        # self.data = self.data[self.data['clean_review_length'] >= 5]
+        # self.logger.info(
+        #     f"Data shape after filtering 'clean_review' length >= 5: {self.data.shape} "
+        #     f"(Removed {initial_shape[0] - self.data.shape[0]} rows)"
+        # )
 
-        self.data = self.data[self.data['clean_review'].str.strip() != '']
-        self.logger.info(f"Data shape after removing empty 'clean_review': {self.data.shape}")
+        # self.data = self.data[self.data['clean_review'].str.strip() != '']
+        # self.logger.info(f"Data shape after removing empty 'clean_review': {self.data.shape}")
 
-    def feature_engineering(self):
-        """
-        1) 요일 컬럼(day_of_week)
-        2) 주말여부 컬럼(is_weekend)
-        3) 월(month)
-        """
-        self.data['day_of_week'] = self.data['date'].dt.day_name()
-        self.data['is_weekend'] = self.data['date'].dt.dayofweek >= 5  # 토(5), 일(6)
-        self.data['month'] = self.data['date'].dt.month
+    # def feature_engineering(self):
+    #     """
+    #     1) 요일 컬럼(day_of_week)
+    #     2) 주말여부 컬럼(is_weekend)
+    #     3) 월(month)
+    #     """
+    #     self.data['day_of_week'] = self.data['date'].dt.day_name()
+    #     self.data['is_weekend'] = self.data['date'].dt.dayofweek >= 5  # 토(5), 일(6)
+    #     self.data['month'] = self.data['date'].dt.month
 
-        self.logger.info("Feature engineering completed.")
+    #     self.logger.info("Feature engineering completed.")
 
     def save_to_database(self):
         """
@@ -114,28 +114,28 @@ class KakaoProcessor(BaseDataProcessor):
         final_data.to_csv(output_file, index=False, encoding='utf-8-sig')
         self.logger.info(f"Data saved successfully at {output_file}.")
 
-    def clean_text(self, text: str) -> str:
-        """
-        기존 KakaoProcessor + GoogleProcessor(키위) 로직을 결합한 텍스트 전처리:
-          1) 문자열 체크
-          2) 특수문자 제거 (공백, 단어문자, 숫자만 남김)
-          3) Kiwi 토큰화 -> 'NN' 태그이면서 길이 >= 2인 단어만 추출
-          4) Stopwords 제거
-          5) 최종 문자열 반환
-        """
-        if not isinstance(text, str):
-            text = ''
+    # def clean_text(self, text: str) -> str:
+    #     """
+    #     기존 KakaoProcessor + GoogleProcessor(키위) 로직을 결합한 텍스트 전처리:
+    #       1) 문자열 체크
+    #       2) 특수문자 제거 (공백, 단어문자, 숫자만 남김)
+    #       3) Kiwi 토큰화 -> 'NN' 태그이면서 길이 >= 2인 단어만 추출
+    #       4) Stopwords 제거
+    #       5) 최종 문자열 반환
+    #     """
+    #     if not isinstance(text, str):
+    #         text = ''
 
-        # (GoogleProcessor) 특수문자 제거: [^\s\w\d]
-        filtered_content = re.sub(r'[^\s\w\d]', ' ', text)
+    #     # (GoogleProcessor) 특수문자 제거: [^\s\w\d]
+    #     filtered_content = re.sub(r'[^\s\w\d]', ' ', text)
 
-        # Kiwi 토큰화 & 명사(NN) 추출
-        kiwi_tokens = self.kiwi.tokenize(filtered_content)
-        noun_tokens = [token.form for token in kiwi_tokens if ('NN' in token.tag) and (len(token.form) > 1)]
+    #     # Kiwi 토큰화 & 명사(NN) 추출
+    #     kiwi_tokens = self.kiwi.tokenize(filtered_content)
+    #     noun_tokens = [token.form for token in kiwi_tokens if ('NN' in token.tag) and (len(token.form) > 1)]
 
-        # Stopwords 제거
-        if self.stopwords:
-            noun_tokens = [word for word in noun_tokens if word not in self.stopwords]
+    #     # Stopwords 제거
+    #     if self.stopwords:
+    #         noun_tokens = [word for word in noun_tokens if word not in self.stopwords]
 
-        # 최종 문자열
-        return " ".join(noun_tokens)
+    #     # 최종 문자열
+    #     return " ".join(noun_tokens)
