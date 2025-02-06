@@ -74,70 +74,75 @@ class DiningcodeProcessor(BaseDataProcessor):
                 .fillna(0)                # Replace NaN with 0 if no match
                 .astype(int)              # Convert to integer
             )
-
-            # 4) 한글 텍스트 전처리
-            kiwi = Kiwi()
-
-            # def do_Kr_preprocessing(text):
-            #     # 한글, 숫자, 공백, 알파벳, 숫자 이외는 모두 제거
-            #     filtered_content = re.sub(r'[^\s\w\d]', ' ', text)
-            #     kiwi_tokens = kiwi.tokenize(filtered_content)
-            #     # 명사 태그(NN*) 추출, 길이가 1 이하인 토큰은 제외
-            #     Noun_words = [token.form for token in kiwi_tokens if 'NN' in token.tag and len(token.form) > 1]
-            #     return " ".join(Noun_words)
-
-            def do_Kr_preprocessing(text):
-                # ✅ Convert non-string values to strings
-                if not isinstance(text, str):
-                    text = str(text)  # Convert NaN, floats, or numbers to string
-
-                # ✅ Handle NaN values explicitly
-                if text.lower() == "nan":  
-                    return ""
-
-                # ✅ Remove special characters
-                filtered_content = re.sub(r'[^\s\w\d]', ' ', text)
-
-                kiwi_tokens = kiwi.tokenize(filtered_content)
-                # 명사 태그(NN*) 추출, 길이가 1 이하인 토큰은 제외
-                Noun_words = [token.form for token in kiwi_tokens if 'NN' in token.tag and len(token.form) > 1]
-
-                return " ".join(Noun_words)
-
-            self.data['processed_text'] = self.data['Comment'].apply(do_Kr_preprocessing)
-
-            self.logger.info("Preprocessing completed")
         except Exception as e:
             self.logger.error(f"Preprocessing failed: {e}")
             raise
+        
+        # 서버 돌리기 위해서 오래 걸리는 프로세스 모두 제거
 
-    def feature_engineering(self):
-        """
-        - 날짜 기반 파생변수 (요일, 주말여부, 월)
-        - TF-IDF로 텍스트 벡터화
-        """
-        self.logger.info("Starting feature engineering")
-        try:
-            self.logger.info(f"Checking for NaT in 'Date' before feature engineering")
-            self.data = self.data.dropna(subset=['Date'])
+        #     # 4) 한글 텍스트 전처리
+        #     kiwi = Kiwi()
 
-            # 날짜 기반 파생변수
-            self.data['day_of_week'] = self.data['Date'].dt.day_name()
-            self.data['is_weekend'] = self.data['Date'].dt.dayofweek >= 5
-            self.data['month'] = self.data['Date'].dt.month
+        #     # def do_Kr_preprocessing(text):
+        #     #     # 한글, 숫자, 공백, 알파벳, 숫자 이외는 모두 제거
+        #     #     filtered_content = re.sub(r'[^\s\w\d]', ' ', text)
+        #     #     kiwi_tokens = kiwi.tokenize(filtered_content)
+        #     #     # 명사 태그(NN*) 추출, 길이가 1 이하인 토큰은 제외
+        #     #     Noun_words = [token.form for token in kiwi_tokens if 'NN' in token.tag and len(token.form) > 1]
+        #     #     return " ".join(Noun_words)
 
-            # TF-IDF 벡터화
-            vectorizer = TfidfVectorizer(max_features=100)
-            tfidf_matrix = vectorizer.fit_transform(self.data['processed_text'])
-            tfidf_df = pd.DataFrame(tfidf_matrix.toarray(), columns=vectorizer.get_feature_names_out())
+        #     def do_Kr_preprocessing(text):
+        #         # ✅ Convert non-string values to strings
+        #         if not isinstance(text, str):
+        #             text = str(text)  # Convert NaN, floats, or numbers to string
 
-            # 기존 self.data에 TF-IDF 특성 합치기
-            self.data = pd.concat([self.data, tfidf_df], axis=1)
+        #         # ✅ Handle NaN values explicitly
+        #         if text.lower() == "nan":  
+        #             return ""
 
-            self.logger.info("Feature engineering completed")
-        except Exception as e:
-            self.logger.error(f"Feature engineering failed: {e}")
-            raise
+        #         # ✅ Remove special characters
+        #         filtered_content = re.sub(r'[^\s\w\d]', ' ', text)
+
+        #         kiwi_tokens = kiwi.tokenize(filtered_content)
+        #         # 명사 태그(NN*) 추출, 길이가 1 이하인 토큰은 제외
+        #         Noun_words = [token.form for token in kiwi_tokens if 'NN' in token.tag and len(token.form) > 1]
+
+        #         return " ".join(Noun_words)
+
+        #     self.data['processed_text'] = self.data['Comment'].apply(do_Kr_preprocessing)
+
+        #     self.logger.info("Preprocessing completed")
+        # except Exception as e:
+        #     self.logger.error(f"Preprocessing failed: {e}")
+        #     raise
+
+    # def feature_engineering(self):
+    #     """
+    #     - 날짜 기반 파생변수 (요일, 주말여부, 월)
+    #     - TF-IDF로 텍스트 벡터화
+    #     """
+    #     self.logger.info("Starting feature engineering")
+    #     try:
+    #         self.logger.info(f"Checking for NaT in 'Date' before feature engineering")
+    #         self.data = self.data.dropna(subset=['Date'])
+
+    #         # 날짜 기반 파생변수
+    #         self.data['day_of_week'] = self.data['Date'].dt.day_name()
+    #         self.data['is_weekend'] = self.data['Date'].dt.dayofweek >= 5
+    #         self.data['month'] = self.data['Date'].dt.month
+
+    #         # TF-IDF 벡터화
+    #         vectorizer = TfidfVectorizer(max_features=100)
+    #         tfidf_matrix = vectorizer.fit_transform(self.data['processed_text'])
+    #         tfidf_df = pd.DataFrame(tfidf_matrix.toarray(), columns=vectorizer.get_feature_names_out())
+
+    #         # 기존 self.data에 TF-IDF 특성 합치기
+    #         self.data = pd.concat([self.data, tfidf_df], axis=1)
+
+    #         self.logger.info("Feature engineering completed")
+    #     except Exception as e:
+    #         self.logger.error(f"Feature engineering failed: {e}")
+    #         raise
 
     def save_to_database(self):
         """

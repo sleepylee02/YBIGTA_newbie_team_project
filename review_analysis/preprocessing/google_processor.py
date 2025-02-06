@@ -46,43 +46,43 @@ class GoogleProcessor(BaseDataProcessor):
         self.data = self.data[(self.data['star_rating'] >= 1) & (self.data['star_rating'] <= 5)]
         self.logger.info(f"Filtered invalid star ratings. Remaining rows: {len(self.data)}")
 
-        # 텍스트 전처리
-        self.data['processed_text'] = self.data['review_text'].apply(self.clean_text)
-        self.logger.info("Completed text preprocessing")
+        # # 텍스트 전처리
+        # self.data['processed_text'] = self.data['review_text'].apply(self.clean_text)
+        # self.logger.info("Completed text preprocessing")
 
-    def clean_text(self, text: str):
-        """
-        한글 텍스트에서 특수문자 제거, Kiwi를 이용해 명사(NN)만 추출 (길이 2자 이상).
-        """
-        if not isinstance(text, str):
-            text = ''
-        # 특수문자 제거
-        filtered_content = re.sub(r'[^\s\w\d]', ' ', text)
-        # Kiwi 토큰화
-        kiwi_tokens = self.kiwi.tokenize(filtered_content)
-        # 명사(NN)이면서 길이 2 이상인 단어만 추출
-        noun_words = [token.form for token in kiwi_tokens if 'NN' in token.tag and len(token.form) > 1]
-        return " ".join(noun_words)
+    # def clean_text(self, text: str):
+    #     """
+    #     한글 텍스트에서 특수문자 제거, Kiwi를 이용해 명사(NN)만 추출 (길이 2자 이상).
+    #     """
+    #     if not isinstance(text, str):
+    #         text = ''
+    #     # 특수문자 제거
+    #     filtered_content = re.sub(r'[^\s\w\d]', ' ', text)
+    #     # Kiwi 토큰화
+    #     kiwi_tokens = self.kiwi.tokenize(filtered_content)
+    #     # 명사(NN)이면서 길이 2 이상인 단어만 추출
+    #     noun_words = [token.form for token in kiwi_tokens if 'NN' in token.tag and len(token.form) > 1]
+    #     return " ".join(noun_words)
 
-    def feature_engineering(self):
-        """
-        피처 엔지니어링:
-        1) TF-IDF 벡터화
-        """
-        self.logger.info("Starting feature engineering")
-        try:
-            # TF-IDF 벡터화
-            vectorizer = TfidfVectorizer(max_features=100)
-            tfidf_matrix = vectorizer.fit_transform(self.data['processed_text'])
-            tfidf_df = pd.DataFrame(tfidf_matrix.toarray(), columns=vectorizer.get_feature_names_out())
-            self.logger.info("TF-IDF vectorization completed.")
+    # def feature_engineering(self):
+    #     """
+    #     피처 엔지니어링:
+    #     1) TF-IDF 벡터화
+    #     """
+    #     self.logger.info("Starting feature engineering")
+    #     try:
+    #         # TF-IDF 벡터화
+    #         vectorizer = TfidfVectorizer(max_features=100)
+    #         tfidf_matrix = vectorizer.fit_transform(self.data['processed_text'])
+    #         tfidf_df = pd.DataFrame(tfidf_matrix.toarray(), columns=vectorizer.get_feature_names_out())
+    #         self.logger.info("TF-IDF vectorization completed.")
 
-            # 원본 데이터와 결합
-            self.data = pd.concat([self.data, tfidf_df], axis=1)
-            self.logger.info("Concatenated TF-IDF features with original data.")
-        except Exception as e:
-            self.logger.error(f"Feature engineering failed: {e}")
-            raise
+    #         # 원본 데이터와 결합
+    #         self.data = pd.concat([self.data, tfidf_df], axis=1)
+    #         self.logger.info("Concatenated TF-IDF features with original data.")
+    #     except Exception as e:
+    #         self.logger.error(f"Feature engineering failed: {e}")
+    #         raise
 
     def save_to_database(self):
         """
