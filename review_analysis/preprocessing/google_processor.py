@@ -8,7 +8,7 @@ import sys
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 
-from review_analysis.preprocessing.base_processor import BaseDataProcessor
+from base_processor import BaseDataProcessor
 from kiwipiepy import Kiwi # type : ignore
 
 class GoogleProcessor(BaseDataProcessor):

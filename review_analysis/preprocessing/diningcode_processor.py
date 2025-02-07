@@ -3,9 +3,10 @@ import pandas as pd
 import re
 from kiwipiepy import Kiwi
 from sklearn.feature_extraction.text import TfidfVectorizer
-
-from review_analysis.preprocessing.base_processor import BaseDataProcessor
-from utils.logger import setup_logger
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+from base_processor import BaseDataProcessor
+from logging import Logger
 
 
 class DiningcodeProcessor(BaseDataProcessor):
@@ -16,7 +17,7 @@ class DiningcodeProcessor(BaseDataProcessor):
         
         # Logger 초기화
         log_file = os.path.join(output_dir, "DiningProcessor.log")
-        self.logger = setup_logger(log_file)
+        self.logger = Logger(log_file)
 
         # 데이터 읽기
         self.data = self._read_input()
